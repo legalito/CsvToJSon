@@ -20,9 +20,7 @@ if (isset($_POST['submit']))
         $rows[] = $row;
     }
     fclose($file);
-    // Remove the first one that contains headers
     $headers = array_shift($rows);
-    // Combine the headers with each following row
     $array = [];
     foreach ($rows as $row) {
         $array[] = array_combine($headers, $row);
