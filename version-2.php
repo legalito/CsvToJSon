@@ -15,7 +15,7 @@
 
         <input size='50' type='file' name='filename'>
         </br>
-        <input type='submit' name='submit' value='Upload Products'> 
+        <input type='submit' name='submit' value='Convertir'> 
     </form>
 </body>
 
