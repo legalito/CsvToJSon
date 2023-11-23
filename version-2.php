@@ -11,11 +11,11 @@
 <body>
     <form enctype='multipart/form-data' action='' method='post'>
 
-        <label>Upload Product CSV file Here</label>
+        <label>Sélectionner votre fichier CSV ou XML</label>
 
         <input size='50' type='file' name='filename'>
         </br>
-        <input type='submit' name='submit' value='Upload Products'>
+        <input type='submit' name='submit' value='Upload Products'> 
     </form>
 </body>
 

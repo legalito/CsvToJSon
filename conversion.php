@@ -11,12 +11,12 @@ class conversion{
     }
 
     public function getFile($fileImport){
-        $extension = strstr(basename($fileImport['name'],".csv"),".");
-        if($extension == ""){
+        $extension = pathinfo($fileImport['name'], PATHINFO_EXTENSION);
+        if($extension === "csv"){
             $this->filename = basename($fileImport['name'],".csv");
             $this->file = fopen($fileImport['tmp_name'], "r");
             $this->convertCSV();
-        }else {
+        }else if ($extension === "xml") {
             $this->filename = basename($fileImport['name'],".xml");
             $this->convertXML($fileImport['tmp_name']);
         }
