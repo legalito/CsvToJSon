@@ -43,6 +43,10 @@ class conversion{
 
     public function createJSON(){
         $this->json = json_encode($this->dataArray, JSON_PRETTY_PRINT);
+        $dir_to_save = "./FileConvert";
+        if (!is_dir($dir_to_save)) {
+        mkdir($dir_to_save);
+        }
         file_put_contents('FileConvert/'.$this->filename . '.json', $this->json);
     }
 
