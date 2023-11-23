@@ -4,7 +4,7 @@
 		
 <label>Upload Product CSV file Here</label>
  
-<input size='50' type='file' name='filename' accept=".csv">
+<input size='50' type='file' name='filename'>
 </br>
 <input type='submit' name='submit' value='Upload Products' >
  
