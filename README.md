@@ -34,7 +34,17 @@ Ce projet à pour objectif de convertir un fichier CSV ou XML au choix en JSON p
 
 ## Explication des fichiers
 
-### `version2.php`
+### `index.php`
+
+Ce fichier est la première version du convertisseur CSV en JSON. Il contient l'interface  ainsi que le script qui convertis le fichier.
+
+Dans ce fichier on peut retrouver :
+
+  - ** Formulaire HTML :** dedans on va retrouver un form qui sera en method POST au submit de l'input "Convertir", on peut retrouver également un input de type qui a pour nom "filename" qui permet l'upload de fichier.
+
+  - ** Script PHP :** il permet de vérifier que une fois le bouton submit cliquer cela récupère le nom du fichier dans un premier temps, puis ensuite  l'ouvre afin de récupérer ces informations et grâce à la fonction fgetcsv afin de lire les lignes du document et de les parse pour renvoyer tout cela dans un tableau. Ensuite grâce à la fonction array_combine  à partir de notre tableau de clé et notr tableau de valeur qu'on combine pour avoir un seul tableau qu'on va ensuite encode en json pourmettre le fichier au final dans le projet
+
+### `version-2.php`
 
 le fichier version-2.php est le fichier principale du projet il contient l'interface web qui permet à l'utilisateur d'interagir et de convertir le fichier souhaiter
 
